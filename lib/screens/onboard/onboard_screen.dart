@@ -5,12 +5,13 @@ import 'package:credsafe/utils/constants/constants_onboard.dart';
 import 'package:credsafe/utils/common_widgets/onboard_box.dart';
 import 'package:credsafe/utils/constants/app_constants.dart';
 import 'package:credsafe/utils/constants/image_constant.dart';
+import 'package:credsafe/utils/sizes/size.dart';
 import 'package:flutter/material.dart';
 import 'package:onboarding/onboarding.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class OnboardingScreen extends StatefulWidget {
-  const OnboardingScreen({Key? key}) : super(key: key);
+  const OnboardingScreen({super.key});
 
   @override
   State<OnboardingScreen> createState() => _OnboardingScreenState();
@@ -21,7 +22,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   final activePainter = Paint();
   final inactivePainter = Paint();
 
-  static const width = 100.0;
+  static const width = w100;
   @override
   void initState() {
     super.initState();
@@ -102,66 +103,57 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Onboarding FooterIndicator 2',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home:
-      Scaffold(
-        body: Onboarding(
-            swipeableBody: onboardingPagesList,
-            startIndex: 0,
-            onPageChanges: (_, __, currentIndex, sd) {
-              index = currentIndex;
-            },
-            buildFooter: (context, dragDistance, pagesLength, currentIndex,
-                setIndex, sd) {
-              return DecoratedBox(
-                decoration: BoxDecoration(
-                  color: boxWhiteColor,
-                  border: Border.all(
-                    width: 0.0,
-                    color: background,
-                  ),
+    return Scaffold(
+      body: Onboarding(
+          swipeableBody: onboardingPagesList,
+          startIndex: 0,
+          onPageChanges: (_, __, currentIndex, sd) {
+            index = currentIndex;
+          },
+          buildFooter: (context, dragDistance, pagesLength, currentIndex,
+              setIndex, sd) {
+            return DecoratedBox(
+              decoration: BoxDecoration(
+                color: boxWhiteColor,
+                border: Border.all(
+                  width: w0,
+                  color: background,
                 ),
-                child: ColoredBox(
-                  color: boxWhiteColor,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 40
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        index != pagesLength - 1
-                            ? _skipButton(setIndex: setIndex)
-                            : _signupButton,
-                        Padding(
-                          padding: const EdgeInsets.only(right: 45.0),
-                          child: Indicator<SquarePainter>(
-                            painter: SquarePainter(
-                              currentPageIndex: index,
-                              pagesLength: pagesLength,
-                              netDragPercent: dragDistance,
-                              activePainter: activePainter,
-                              inactivePainter: inactivePainter,
-                              slideDirection: sd,
-                              space: 5,
-                              width: 10,
-                              showAllActiveIndicators: false,
-                            ),
+              ),
+              child: ColoredBox(
+                color: boxWhiteColor,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: p20, vertical: p40
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      index != pagesLength - 1
+                          ? _skipButton(setIndex: setIndex)
+                          : _signupButton,
+                      Padding(
+                        padding: const EdgeInsets.only(right: p45),
+                        child: Indicator<SquarePainter>(
+                          painter: SquarePainter(
+                            currentPageIndex: index,
+                            pagesLength: pagesLength,
+                            netDragPercent: dragDistance,
+                            activePainter: activePainter,
+                            inactivePainter: inactivePainter,
+                            slideDirection: sd,
+                            space: p5,
+                            width: p10,
+                            showAllActiveIndicators: false,
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
-              );
-            }),
-      ),
+              ),
+            );
+          }),
     );
   }
 

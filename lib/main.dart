@@ -1,6 +1,9 @@
+import 'package:credsafe/domain/app_binding/common_binding.dart';
 import 'package:credsafe/screens/auth_wrapper/auth_wrapper.dart';
 import 'package:credsafe/screens/onboard/onboard_screen.dart';
+import 'package:credsafe/utils/constants/app_constants.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 
@@ -18,10 +21,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Creds Safe',
+    return GetMaterialApp(
+      title: appName,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
+      initialBinding: AppBinding(),
       home: isFirstTime ? const OnboardingScreen() : AuthWrapper(),
     );
   }

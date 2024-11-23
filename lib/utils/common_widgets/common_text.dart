@@ -1,3 +1,4 @@
+import 'package:credsafe/utils/sizes/size.dart';
 import 'package:flutter/material.dart';
 
 class CommonText extends StatelessWidget {
@@ -8,7 +9,7 @@ class CommonText extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Text(
       text,
-      style: const TextStyle(color: Colors.blue,fontSize: 15),
+      style: const TextStyle(color: Colors.blue,fontSize: p15),
     );
   }
 }

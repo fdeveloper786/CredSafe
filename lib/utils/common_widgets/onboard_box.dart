@@ -1,4 +1,5 @@
 import 'package:credsafe/utils/constants/constants_onboard.dart';
+import 'package:credsafe/utils/sizes/size.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -16,7 +17,7 @@ class OnBoardBox extends StatelessWidget {
         decoration: BoxDecoration(
           color: boxWhiteColor,
           border: Border.all(
-            width: 0.0,
+            width: w0,
             color: boxWhiteColor,
           ),
         ),
@@ -26,21 +27,21 @@ class OnBoardBox extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-                height: 350,
-                padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                height: h350,
+                padding: const EdgeInsets.symmetric(horizontal: h40),
                 child: SvgPicture.asset(
                     svgName
                 )
             ),
              SizedBox(
-              height: 200,
+              height: h200,
               child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                      padding: const EdgeInsets.symmetric(horizontal: p20, vertical: p10),
                       child: Text(
                         title,
                         style: pageTitleStyle,
@@ -48,7 +49,7 @@ class OnBoardBox extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                      padding: const EdgeInsets.symmetric(horizontal: p20, vertical: p5),
                       child: Text(
                         description,
                         style: pageInfoStyle,

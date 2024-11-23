@@ -1,6 +1,9 @@
 import 'dart:developer';
 
 import 'package:credsafe/screens/auth_wrapper/auth_wrapper.dart';
+import 'package:credsafe/utils/common_widgets/common_text.dart';
+import 'package:credsafe/utils/constants/app_color.dart';
+import 'package:credsafe/utils/constants/app_decoration.dart';
 import 'package:credsafe/utils/constants/constants_onboard.dart';
 import 'package:credsafe/utils/common_widgets/onboard_box.dart';
 import 'package:credsafe/utils/constants/app_constants.dart';
@@ -50,15 +53,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             borderRadius: defaultSkipButtonBorderRadius,
             onTap: () {
               if (setIndex != null) {
-                index = 3;
-                setIndex(3);
+                index = 2;
+                setIndex(2);
+                if(index == 2) {
+                  activePainter.color = AppColor.hexBlue;
+                }else {
+                  activePainter.color = Colors.grey;
+                }
               }
             },
-            child: const Padding(
+            child:  Padding(
               padding: defaultSkipButtonPadding,
-              child: Text(
-                skipLbl,
-                style: defaultSkipButtonTextStyle,
+              child: CommonText(
+                text: skipLbl,
+                textStyle: AppStyle.txtWhite16
               ),
             ),
           ),
@@ -73,8 +81,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       child: Align(
         alignment: Alignment.centerLeft,
         child: Material(
-          borderRadius: defaultProceedButtonBorderRadius,
-          color: defaultProceedButtonColor,
+          borderRadius:defaultProceedButtonBorderRadius,
+          color: AppColor.hexBlue,
           child: InkWell(
             borderRadius: defaultProceedButtonBorderRadius,
             onTap: () async {
@@ -88,12 +96,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 MaterialPageRoute(builder: (context) => AuthWrapper()),
               );
             },
-            child: const Padding(
+            child:  Padding(
               padding: defaultProceedButtonPadding,
-              child: Text(
-                signUp,
-                style: defaultProceedButtonTextStyle,
-              ),
+              child: CommonText(
+                text: signUp,
+                textStyle: AppStyle.txtWhite16,
+              )
             ),
           ),
         ),
@@ -109,9 +117,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           startIndex: 0,
           onPageChanges: (_, __, currentIndex, sd) {
             index = currentIndex;
+            if(index == 2) {
+              activePainter.color = AppColor.hexBlue;
+            }else {
+              activePainter.color = Colors.grey;
+            }
           },
-          buildFooter: (context, dragDistance, pagesLength, currentIndex,
-              setIndex, sd) {
+          buildFooter: (context, dragDistance, pagesLength, currentIndex, setIndex, sd) {
             return DecoratedBox(
               decoration: BoxDecoration(
                 color: boxWhiteColor,

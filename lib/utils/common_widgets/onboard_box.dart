@@ -1,3 +1,5 @@
+import 'package:credsafe/utils/common_widgets/common_text.dart';
+import 'package:credsafe/utils/constants/app_decoration.dart';
 import 'package:credsafe/utils/constants/constants_onboard.dart';
 import 'package:credsafe/utils/sizes/size.dart';
 import 'package:flutter/material.dart';
@@ -42,19 +44,19 @@ class OnBoardBox extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: p20, vertical: p10),
-                      child: Text(
-                        title,
-                        style: pageTitleStyle,
+                      child: CommonText(
+                        text: title,
+                        textStyle: AppStyle.txtBlackBold20,
                         textAlign: TextAlign.left,
-                      ),
+                      )
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: p20, vertical: p5),
-                      child: Text(
-                        description,
-                        style: pageInfoStyle,
+                      child: CommonText(
+                        text: description,
+                        textStyle: AppStyle.txtBlack16,
                         textAlign: TextAlign.left,
-                      ),
+                      )
                     ),
                   ],
                 ),

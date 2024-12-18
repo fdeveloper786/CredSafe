@@ -1,5 +1,5 @@
 import 'dart:math';
-import 'package:credsafe/screens/homepage/home_screen.dart';
+import 'package:credsafe/screens/dashboard/dashboard_screen.dart';
 import 'package:credsafe/utils/common_widgets/navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -54,7 +54,7 @@ class LoginController extends GetxController {
 
   void navigateToScreen(BuildContext screenContext) {
       if(otpController.text.isNotEmpty) {
-        AppNavigator.commonNavigator(screenContext, const HomeScreen());
+        AppNavigator.commonNavigator(screenContext, Dashboard());
         clearField();
       }
   }

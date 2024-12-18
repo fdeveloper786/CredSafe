@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "566818717349",
+    "project_id": "credsafe-ade9a",
+    "storage_bucket": "credsafe-ade9a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566818717349:android:c037fabfdc0fe55890974c",
+        "android_client_info": {
+          "package_name": "com.fdeveloper786.credsafe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDhLmzz5dWbsmvvFIFRkHj0Gf-V-lONOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

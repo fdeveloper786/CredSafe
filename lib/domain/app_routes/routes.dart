@@ -1,6 +1,5 @@
-
-import 'package:credsafe/screens/homepage/home_binding.dart';
-import 'package:credsafe/screens/homepage/home_screen.dart';
+import 'package:credsafe/screens/dashboard/dashboard_binding.dart';
+import 'package:credsafe/screens/dashboard/dashboard_screen.dart';
 import 'package:credsafe/screens/login/login.dart';
 import 'package:credsafe/screens/login/login_binding.dart';
 import 'package:get/get.dart';
@@ -17,6 +16,6 @@ class AppRoutes {
   static List<GetPage> pages = [
     GetPage(name: loginScreen, page:() => Login(), bindings: [ LoginBinding() ]),
     GetPage(name: initialRoute, page:() => Login(), bindings: [ LoginBinding() ]),
-    GetPage(name: homeScreen, page:() => const HomeScreen(), bindings: [ HomeBinding() ]),
+    GetPage(name: homeScreen, page:() =>  Dashboard(), bindings: [ DashboardBinding() ]),
   ];
 }

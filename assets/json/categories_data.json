@@ -1,0 +1,255 @@
+{
+  "categories": [
+    {
+      "documentId": 1,
+      "category_name": "Social Media",
+      "category_logo": "assets/svg/social_media.svg"
+    },
+    {
+      "documentId": 2,
+      "category_name": "Entertainment",
+      "category_logo": "assets/svg/entertainment.svg"
+    },
+    {
+      "documentId": 3,
+      "category_name": "Google",
+      "category_logo": "assets/svg/google_icon.svg"
+    },
+    {
+      "documentId": 4,
+      "category_name": "Control Version",
+      "category_logo": "assets/svg/control.svg"
+    },
+
+    {
+      "documentId": 5,
+      "category_name": "Microsoft",
+      "category_logo": "assets/svg/microsoft_logo.svg"
+    },
+    {
+      "documentId": 6,
+      "category_name": "Shopping",
+      "category_logo": "assets/svg/e_commerce.svg"
+    },
+    {
+      "documentId": 7,
+      "category_name": "Banking",
+      "category_logo": "assets/svg/banking.svg"
+    }
+  ],
+  "categoryItems": {
+    "Social Media": [
+      {
+        "title": "Facebook",
+        "icon": "assets/svg/social_media/facebook.svg"
+      },
+      {
+        "title": "Instagram",
+        "icon": "assets/svg/social_media/instagram.svg"
+      },
+      {
+        "title": "Twitter",
+        "icon": "assets/svg/social_media/twitter.svg"
+      },
+      {
+        "title": "Telegram",
+        "icon": "assets/svg/social_media/telegram.svg"
+      },
+      {
+        "title": "Snapchat",
+        "icon": "assets/svg/social_media/snapchat.svg"
+      },
+      {
+        "title": "LinkedIn",
+        "icon": "assets/svg/social_media/linkedin.svg"
+      },
+      {
+        "title": "Pinterest",
+        "icon": "assets/svg/social_media/pinterest.svg"
+      },
+      {
+        "title": "Reddit",
+        "icon": "assets/svg/social_media/reddit.svg"
+      }
+    ],
+    "Entertainment" : [
+      {
+        "title" : "Netflix",
+        "icon" : ""
+      },
+      {
+        "title" : "Hulu",
+        "icon" : ""
+      },
+      {
+        "title" : "Amazon Prime",
+        "icon" : ""
+      },
+      {
+        "title" : "Disney+",
+        "icon" : ""
+      },
+      {
+        "title" : "Spotify",
+        "icon" : ""
+      },
+      {
+        "title" : "Apple Music",
+        "icon" : ""
+      }
+    ],
+    "Google" : [
+      {
+        "title" : "Gmail",
+        "icon" : ""
+      },
+      {
+        "title" : "Drive",
+        "icon" : ""
+      },
+      {
+        "title" : "Photos",
+        "icon" : ""
+      },
+      {
+        "title" : "YouTube",
+        "icon" : ""
+      },
+      {
+        "title" : "Google Calendar",
+        "icon" : ""
+      },
+      {
+        "title" : "Google Maps",
+        "icon" : ""
+      }
+    ],
+    "Control Version" : [
+      {
+        "title" : "Git",
+        "icon" : ""
+      },
+      {
+        "title" : "GitHub",
+        "icon" : ""
+      },
+      {
+        "title" : "BitBucket",
+        "icon" : ""
+      },
+      {
+        "title" : "Azure",
+        "icon" : ""
+      },
+      {
+        "title" : "GitHub Copilot",
+        "icon" : ""
+      },
+      {
+        "title" : "Docker",
+        "icon" : ""
+      }, {
+        "title" : "Jenkins",
+        "icon" : ""
+      },
+      {
+        "title" : "Jira",
+        "icon" : ""
+      },
+      {
+        "title" : "AWS",
+        "icon" : ""
+      }
+    ],
+    "Microsoft" : [
+      {
+        "title" : "Outlook",
+        "icon" : ""
+      },
+      {
+        "title" : "MS Teams",
+        "icon" : ""
+      },
+      {
+        "title" : "Azure",
+        "icon" : ""
+      },
+      {
+        "title" : "OneDrive",
+        "icon" : ""
+      },
+      {
+        "title" : "Microsoft 365",
+        "icon" : ""
+      },
+      {
+        "title" : "SharePoint",
+        "icon" : ""
+      }
+    ],
+    "Shopping" : [
+      {
+        "title" : "Amazon",
+        "icon" : ""
+      },
+      {
+        "title" : "eBay",
+        "icon" : ""
+      },
+      {
+        "title" : "Walmart",
+        "icon" : ""
+      },
+      {
+        "title" : "Flipkart",
+        "icon" : ""
+      },
+      {
+        "title" : "Etsy",
+        "icon" : ""
+      },
+      {
+        "title" : "AliExpress",
+        "icon" : ""
+      }
+    ],
+    "Banking" : [
+      {
+        "title" : "SBI",
+        "icon" : ""
+      },
+      {
+        "title" : "ICICI",
+        "icon" : ""
+      },
+      {
+        "title" : "Axis",
+        "icon" : ""
+      },
+      {
+        "title" : "HDFC",
+        "icon" : ""
+      },
+      {
+        "title" : "Central",
+        "icon" : ""
+      },
+      {
+        "title" : "BOI",
+        "icon" : ""
+      },
+      {
+        "title" : "Union",
+        "icon" : ""
+      },
+      {
+        "title" : "Standard Charted",
+        "icon" : ""
+      },
+      {
+        "title" : "IDBI",
+        "icon" : ""
+      }
+    ]
+  }
+}
